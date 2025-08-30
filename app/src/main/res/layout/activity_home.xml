@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5E8C7">
+
+    <ImageView
+        android:id="@+id/soapwatch_logo"
+        android:layout_width="142dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/soapwatch_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgNotification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSoapLevel"
+        android:layout_width="368dp"
+        android:layout_height="257dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#D8F6FF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soapwatch_logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSoapLevelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varelaround_regular"
+                android:text="SOAP LEVEL"
+                android:textColor="@color/darkblue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp">
+
+                <ProgressBar
+                    android:id="@+id/progressSoapLevel"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circular_progress"
+                    android:rotation="-90" />
+
+
+                <TextView
+                    android:id="@+id/tvSoapLevelPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="100%"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSoapUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#D9F2FF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardSoapLevel"
+        android:backgroundTint="#D8F6FF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/SoapUsageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="241dp"
+                android:fontFamily="@font/varelaround_regular"
+                android:text="SOAP USAGE"
+                android:textColor="@color/darkblue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="linearLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/UsageInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/varelaround_regular"
+                android:text="Usage Information"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/SoapUsageTitle"
+                app:layout_constraintTop_toBottomOf="@+id/SoapUsageTitle" />
+
+            <Spinner
+                android:id="@+id/spUsageFilter"
+                android:layout_width="250dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/layout_background"
+                android:entries="@array/usage_filter"
+                android:fontFamily="@font/varelaround_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UsageInfo" />
+
+
+            <RelativeLayout
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spUsageFilter"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tvStatusHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="Status"
+                    android:textColor="@color/darkblue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimeHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvStatusHeader"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="Time"
+                    android:textColor="@color/darkblue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDateHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvTimeHeader"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="Date"
+                    android:textColor="@color/darkblue"
+                    android:textStyle="bold" />
+
+                <!-- Row 1 -->
+                <TextView
+                    android:id="@+id/tvStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatusHeader"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="Fill"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTimeHeader"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvStatus1"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="9:00AM"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDateHeader"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvTime1"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="9/15/25"
+                    android:textColor="@color/blue" />
+
+                <!-- Row 2 -->
+                <TextView
+                    android:id="@+id/tvStatus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus1"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="Used"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTime1"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvStatus2"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="8:31AM"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDate1"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvTime2"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="9/16/25"
+                    android:textColor="@color/blue" />
+
+                <!-- Row 3 -->
+                <TextView
+                    android:id="@+id/tvStatus3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStatus2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="Empty"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTime2"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvStatus3"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="7:21AM"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvDate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDate2"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@id/tvTime3"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="4dp"
+                    android:text="9/21/25"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/UsageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvStatus3"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/gradient_colorbg"
+                    android:fontFamily="@font/varelaround_regular"
+                    android:padding="8dp"
+                    android:text="USAGE COUNT: 001"
+                    android:textColor="@color/darkblue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvStatusHeader" />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardSoapUsage"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/gradient_colornav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardSoapUsage">
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/menu" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <View
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/circle_bg" />
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:background="@drawable/home"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
