@@ -1,0 +1,99 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/layout_background2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/Back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/arrow_left"
+                android:contentDescription="Back Button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Support"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/sigmarone"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Need help? Fill out the form below or reach us via email/phone."
+                android:textSize="15sp"
+                android:fontFamily="@font/varelaround_regular"
+                android:textColor="@color/darkblue"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                android:textSize="15dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/varelaround_regular"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Email"
+                android:textSize="15dp"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/varelaround_regular"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/inputMessage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Type your message here..."
+                android:gravity="top|start"
+                android:textSize="15dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/varelaround_regular"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnSubmitSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Send Message"
+                android:background="@drawable/gradient_color"
+                app:backgroundTint="@null"
+                android:textColor="@color/white"
+                android:fontFamily="@font/varelaround_regular"
+                android:padding="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

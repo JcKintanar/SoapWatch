@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/beige">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_background2"
+        android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to log out?"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:fontFamily="@font/varelaround_regular"
+        android:textColor="@color/darkblue"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:background="@drawable/gradient_colorbg2"
+            android:fontFamily="@font/varelaround_regular"
+            app:backgroundTint="@null"
+            android:layout_margin="10dp"
+            android:textColor="@color/darkblue"/>
+
+        <Button
+            android:id="@+id/btnConfirmLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:background="@drawable/gradient_color"
+            android:fontFamily="@font/varelaround_regular"
+            app:backgroundTint="@null"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

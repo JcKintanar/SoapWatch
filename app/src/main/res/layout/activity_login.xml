@@ -10,7 +10,7 @@
         android:id="@+id/soapwatch_logo"
         android:layout_width="329dp"
         android:layout_height="135dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/soapwatch_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
     <RelativeLayout
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/layout_background"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,7 +228,5 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/DonthaveAccount" />
         </LinearLayout>
-
-
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
